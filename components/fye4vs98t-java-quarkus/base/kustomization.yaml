@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: fye4vs98t-java-quarkus
+  janus-idp.io/tekton: fye4vs98t-java-quarkus
+  backstage.io/kubernetes-id: fye4vs98t-java-quarkus
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: fye4vs98t-java-quarkus
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
